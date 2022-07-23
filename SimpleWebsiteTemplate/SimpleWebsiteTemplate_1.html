@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<!--Elifakkaya_fullwebsite1-->
+
+<head>
+    <title>Sekme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        #genel {
+            width: 80%;
+            height: auto;
+            justify-content: center;
+        }
+        
+        #ustBilgi {
+            width: auto;
+            height: auto;
+            padding: 0.5%;
+            background-color: rgb(16, 209, 209);
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #ic1 {
+            width: 48%;
+            text-align: left;
+            margin-left: 2%;
+            margin-top: 6px;
+        }
+        
+        #ic2 {
+            width: 48%;
+            text-align: right;
+            margin-top: 6px;
+            margin-right: 2%;
+        }
+        
+        .p1 {
+            display: inline;
+        }
+        
+        .p1:hover {
+            color: whitesmoke;
+            cursor: pointer;
+        }
+        
+        #ic1 i:hover {
+            color: whitesmoke;
+            cursor: pointer;
+        }
+        
+        #ic2 i:hover {
+            color: whitesmoke;
+            cursor: pointer;
+        }
+        
+        #genisAlan {
+            width: auto;
+            height: 500px;
+            background-image: linear-gradient( 45deg, midnightblue, skyblue, palevioletred, crimson);
+            background-size: 500% 500%;
+            animation: animasyon 10s ease infinite;
+            animation-direction: alternate;
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 2s;
+            /*transition-property: color;
+                transition-duration: 1.5s;
+                transition-delay: 1.5s;
+                transition-timing-function: ease-in-out;*/
+            /*transition: width 1.0s ease-in-out 1.0s;*/
+        }
+        
+        #genisAlan:hover {
+            background-image: linear-gradient(45deg, midnightblue, crimson);
+            background-size: 500% 500%;
+            animation: animasyon 5s ease infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes animasyon {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
+        
+        #menu {
+            background-color: black;
+            width: auto;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            position: sticky;
+            top: 0px;
+        }
+        
+        ul {
+            width: 100%;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        li {
+            float: left;
+            font-size: x-large;
+        }
+        
+        li a {
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 11px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: whitesmoke;
+            color: black;
+            cursor: pointer;
+        }
+        
+        #menu input {
+            border: 3px solid goldenrod;
+            width: 35%;
+            height: 40px;
+            margin-right: 2%;
+            border-radius: 5%;
+        }
+        
+        #ortaAlan {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #ortaFotolu {
+            width: auto;
+            height: 100%;
+            margin-left: 2%;
+            justify-content: left;
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        #ortaFotolu img {
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+        
+        #ikonluAlan {
+            background-color: lightgray;
+            width: auto;
+            height: 100%;
+            margin-left: 2%;
+            justify-content: left;
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        #yazar {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 25%;
+        }
+        
+        #ikon i {
+            font-size: 25px;
+            margin: 2%;
+        }
+        
+        #i1 {
+            background-color: mediumblue;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #i2 {
+            background-color: lightskyblue;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #i3 {
+            background-color: orangered;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #i4 {
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #i5 {
+            background-color: firebrick;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #i6 {
+            background-color: palevioletred;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #i7 {
+            background-color: cornflowerblue;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #i8 {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+        }
+        
+        #footer {
+            width: auto;
+            height: 100px;
+            background-color: lightgrey;
+        }
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: firebrick;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5%;
+            font-size: 20px;
+            text-align: center;
+            color: whitesmoke;
+        }
+        
+        #myBtn:hover {
+            background-color: slategray;
+            color: whitesmoke;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            #genel {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            #menu {
+                display: block;
+                height: auto;
+                position: inherit;
+            }
+            li {
+                float: none;
+                display: block;
+            }
+            #ortaAlan {
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            #ustBilgi {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="genel">
+            <div id="ustBilgi">
+                <div id="ic1">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="p1">e-mail |</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="p1">0555 555 55 55 | X-Store</p>
+                </div>
+
+                <div id="ic2">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <p class="p1">Facebook |</p>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p class="p1">Instagram |</p>
+                    <i class="fa-brands fa-youtube"></i>
+                    <p class="p1">Youtube</p>
+                </div>
+            </div>
+
+            <div id="genisAlan">
+                <h1>My X-Blog</h1>
+
+                <h3>
+                    Lorem ipsum dolor <b>X-Blog</b> sit amet, consectetur adipiscing elit
+                </h3>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Style</a></li>
+                    <li><a href="#">Subjects</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <input type="text" placeholder="Search..." />
+            </div>
+
+            <div id="ortaAlan">
+                <div id="ortaFotolu">
+                    <div class="Yazı">
+                        <h2>Note 1</h2>
+                        <h6>Title description, Jan,12,2022</h6>
+                        <img src="https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" />
+                        <p>
+                            Metusestibulum Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p>
+                            Donec non ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam
+                            dui velit, consectetur quis vestibulum non, dignissim in metus.
+                        </p>
+                    </div>
+                    <div class="Yazı">
+                        <h2>Note 2</h2>
+                        <h6>Title description, Feb,16,2022</h6>
+                        <img src="https://images.pexels.com/photos/534757/pexels-photo-534757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                        <p>
+                            Adipiscing elLorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p>
+                            Non ipsum ullamcororem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam
+                            dui velit, consectetur quis vestibulum non, dignissim in metus.
+                        </p>
+                    </div>
+                    <div class="Yazı">
+                        <h2>Note 1</h2>
+                        <h6>Title description, Apr,12,2022</h6>
+                        <img src="https://images.pexels.com/photos/1462124/pexels-photo-1462124.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" />
+                        <p>
+                            Vestibulum non, dignissiorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p>
+                            Consectetur adipiscLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem.
+                            Nullam dui velit, consectetur quis vestibulum non, dignissim in metus.
+                        </p>
+                    </div>
+                </div>
+                <div id="ikonluAlan">
+                    <div id="hakinda">
+                        <h2>Sit amet</h2>
+                        <h4>
+                            Ellus vel, dignissimLorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </h4>
+                        <img id="yazar" src="https://images.pexels.com/photos/7927181/pexels-photo-7927181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                        <p>
+                            Dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur
+                            quis vestibulum non, dignissim in metus.
+                        </p>
+                    </div>
+                    <div id="ikon">
+                        <h2>Social Media Buttons</h2>
+                        <i id="i1" class="fa-brands fa-facebook-f"></i>
+                        <i id="i2" class="fa-brands fa-twitter"></i>
+                        <i id="i3" class="fa-brands fa-google"></i>
+                        <i id="i4" class="fa-brands fa-linkedin-in"></i>
+                        <i id="i5" class="fa-brands fa-youtube"></i>
+                        <i id="i6" class="fa-brands fa-instagram"></i>
+                        <i id="i7" class="fa-brands fa-discord"></i>
+                        <i id="i8" class="fa-brands fa-tumblr"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="footer"></div>
+            <button onclick="topFunc()" id="myBtn">TOP</button>
+        </div>
+    </center>
+    <script>
+        myButton = document.getElementById("myBtn");
+        window.onscroll = function() {
+            scrollFunc();
+        };
+
+        function scrollFunc() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                myButton.style.display = "block";
+            } else {
+                myButton.style.display = "none";
+            }
+        }
+
+        function topFunc() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>

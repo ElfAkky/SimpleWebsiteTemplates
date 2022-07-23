@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Elifakkaya_fullwebsite2-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fullsite2elif</title>
+    <script src="https://kit.fontawesome.com/fe45106741.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #main {
+            width: 100%;
+            height: auto;
+            justify-content: center;
+        }
+        
+        #header {
+            width: auto;
+            height: auto;
+            padding: 0.5%;
+            background-color: rgb(16, 209, 209);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        #headersol {
+            margin-left: 2%;
+            margin-right: 3%;
+            margin-top: 6px;
+        }
+        
+        #headersag {
+            margin-top: 6px;
+            margin-right: 2%;
+        }
+        
+        .p1 {
+            display: inline;
+        }
+        
+        .p1:hover {
+            color: white;
+            cursor: pointer;
+        }
+        
+        #headersol i:hover {
+            color: white;
+            cursor: pointer;
+        }
+        
+        #headersag i:hover {
+            color: white;
+            cursor: pointer;
+        }
+        
+        #pano {
+            width: auto;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient( 45deg, midnightblue, skyblue, palevioletred, crimson);
+            background-size: 500% 500%;
+            animation: animasyon 10s ease infinite;
+            animation-direction: alternate;
+            color: white;
+            transition: all 2s;
+        }
+        
+        #pano:hover {
+            background-image: linear-gradient(45deg, midnightblue, crimson);
+            background-size: 500% 500%;
+            animation: animasyon 5s ease infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes animasyon {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
+        
+        #menu {
+            background-color: black;
+            width: auto;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            position: sticky;
+            top: 0px;
+        }
+        
+        ul {
+            width: 100%;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        li {
+            float: left;
+            font-size: 20px;
+        }
+        
+        li a {
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 11px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: gray;
+            color: black;
+            cursor: pointer;
+        }
+        
+        #menu input {
+            border: 2px solid yellow;
+            width: 60%;
+            height: 40px;
+            margin-right: 2%;
+            border-radius: 5%;
+        }
+        
+        #anakısım {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #aside {
+            background-color: lightgray;
+            width: 30%;
+            height: 100vh;
+            justify-content: left;
+            text-align: left;
+            padding-left: 10px;
+        }
+        
+        .aside-image #bir,
+        #iki,
+        #uc,
+        #dort,
+        #bes {
+            border: none;
+            width: 90%;
+            height: 3rem;
+            margin: 0 auto;
+            text-align: left;
+            padding-left: 15px;
+            padding-top: 5px;
+            font-size: 25px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+        
+        #aside h2 {
+            margin-left: 20px;
+        }
+        
+        #aside h3 {
+            margin-left: 20px;
+        }
+        
+        .aside-image #bir:hover,
+        #iki:hover,
+        #uc:hover,
+        #dort:hover,
+        #bes:hover {
+            cursor: pointer;
+            opacity: 0.3;
+        }
+        
+        #section {
+            width: 70%;
+            height: 100vh;
+            text-align: justify;
+            padding-left: 10px;
+        }
+        
+        .section-image {
+            border: 2px solid rgb(179, 179, 179);
+            border-radius: 10px;
+            background-color: rgb(179, 179, 179);
+            width: 98%;
+            height: 10rem;
+            margin: 0 auto;
+            text-align: left;
+            margin-top: -30px;
+            padding: 10px;
+        }
+        
+        #yukaricikma {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            border: none;
+            outline: none;
+            background-color: red;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5%;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        #yukaricikma i {
+            position: relative;
+        }
+        
+        #yukaricikma:hover {
+            background-color: slategray;
+            color: white;
+        }
+        
+        #yukaricikma:hover i {
+            animation: elif 1s infinite;
+            color: turquoise;
+        }
+        
+        @keyframes elif {
+            0% {
+                bottom: 0px;
+                right: 0px;
+            }
+            100% {
+                bottom: 10px;
+                right: 0px;
+            }
+        }
+        
+        #footer {
+            width: auto;
+            height: 50px;
+            background-color: darkgrey;
+            padding-top: 30px;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            #body {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            #menu {
+                display: block;
+                height: auto;
+                position: inherit;
+            }
+            li {
+                float: none;
+                display: block;
+            }
+            #anakısım {
+                display: block;
+            }
+            #aside {
+                width: 100%;
+                height: 50vh;
+            }
+            #section {
+                width: 100%;
+                height: 50vh;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            #header {
+                display: block;
+            }
+        }
+        
+        #not1 {
+            display: block;
+        }
+        
+        #not2,
+        #not3,
+        #not4,
+        #not5 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="main">
+            <div id="header">
+                <div id="headersol">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="p1">e-mail |</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="p1">0555 555 55 55 | X-Store</p>
+                </div>
+
+                <div id="headersag">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <p class="p1">Facebook |</p>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p class="p1">Instagram |</p>
+                    <i class="fa-brands fa-youtube"></i>
+                    <p class="p1">Youtube</p>
+                </div>
+            </div>
+
+            <div id="pano">
+                <h1>My X-Blog</h1>
+
+                <h3>Lorem ipsum <b>X-Blog</b> dolor sit amet, consectetur adipiscing elit</h3>
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Styles</a></li>
+                    <li><a href="#">Subjects</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <input type="text" placeholder="Search..." />
+            </div>
+
+            <div id="anakısım">
+                <div id="aside">
+                    <h2>Panel</h2>
+                    <h3>tincidunt</h3>
+                    <div class="aside-image">
+                        <input id="bir" class="gunluk" type="button" value="Success" style="background-color: green" onclick="gunlukac(event, 'not1')" />
+                        <input id="iki" class="gunluk" type="button" value="Info" style="background-color: blue" onclick="gunlukac(event, 'not2')" />
+                        <!--2.yöntem--<div onclick="butoniki()"class="section-image" style="background-color:blue;">Info</div>-->
+
+                        <input id="uc" class="gunluk" type="button" value="Warning" style="background-color: orange" onclick="gunlukac(event, 'not3')" />
+                        <input id="dort" class="gunluk" type="button" value="Danger" style="background-color: red" onclick="gunlukac(event, 'not4')" />
+                        <input id="bes" class=" class=" gunluk "" type="button" value="Default" style="background-color: gray" onclick="gunlukac(event, 'not5')" />
+                    </div>
+                </div>
+
+                <div id="section">
+
+                    <div id="not1" class="notlar">
+                        <p>
+                            <h1>Note 1 </h1><br>
+
+                        </p>
+                        <div class="section-image">Image1</div>
+                        <p>sectetur adipiscingLorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br> ui velit, consectetur quis vestibuluLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel,
+                            dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus.</p>
+                    </div>
+                    <div id="not2" class="notlar">
+                        <p>
+                            <h1>Note 2 </h1><br>
+
+                        </p>
+                        <div class="section-image">Image2</div>
+                        <p>lor sit amet, consectLorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br>Nullam dui velit, consectetur quis vestibuluLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus
+                            vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus.
+                            <p>
+                    </div>
+
+                    <div id="not3" class="notlar">
+                        <p>
+                            <h1>Note 3 </h1><br>
+
+                        </p>
+                        <div class="section-image">Image3</div>
+                        <p>em vel ex interdum, tiLorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br> nterdum, tincidunt purus eu, laoreet sem. Nullam dui velit,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper,
+                            convallis tellus vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus.</p>
+                    </div>
+
+                    <div id="not4" class="notlar">
+                        <p>
+                            <h1>Note 4 </h1><br>
+
+                        </p>
+                        <div class="section-image">Image4</div>
+                        <p>incidunt purLorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br> dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim
+                            arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus.</p>
+                    </div>
+
+                    <div id="not5" class="notlar">
+                        <p>
+                            <h1>Note 5 </h1><br>
+
+                        </p>
+                        <div class="section-image">Image5</div>
+                        <p>el ex interdum, tincidunt pLorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br> onec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum,
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet
+                            sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer">
+                <center>FOOTER</center>
+            </div>
+            <button onclick="topTik()" id="yukaricikma"><i class="fa-solid fa-person-arrow-up-from-line"></i></button>
+        </div>
+    </center>
+    <script>
+        yukariButtonu = document.getElementById("yukaricikma");
+        window.onscroll = function() {
+            scrollGosterme();
+        };
+
+        function scrollGosterme() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                yukariButtonu.style.display = "block";
+            } else {
+                yukariButtonu.style.display = "none";
+            }
+        }
+
+        function topTik() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        var birr = document.getElementById("bir");
+        var ikii = document.getElementById("iki");
+        var ucc = document.getElementById("uc");
+        var dortt = document.getElementById("dort");
+        var bess = document.getElementById("bes");
+
+        var not11 = document.getElementById("not1");
+        var not22 = document.getElementById("not2");
+        var not33 = document.getElementById("not3");
+        var not44 = document.getElementById("not4");
+        var not55 = document.getElementById("not5");
+
+
+        birr.addEventListener("click", function() {
+            not11.style.display = "block"
+            not22.style.display = "none"
+            not33.style.display = "none"
+            not44.style.display = "none"
+            not55.style.display = "none"
+
+
+        })
+        ikii.addEventListener("click", function() {
+            not11.style.display = "none"
+            not22.style.display = "block"
+            not33.style.display = "none"
+            not44.style.display = "none"
+            not55.style.display = "none"
+        })
+        ucc.addEventListener("click", function() {
+            not11.style.display = "none"
+            not22.style.display = "none"
+            not33.style.display = "block"
+            not44.style.display = "none"
+            not55.style.display = "none"
+        })
+        dortt.addEventListener("click", function() {
+            not11.style.display = "none"
+            not22.style.display = "none"
+            not33.style.display = "none"
+            not44.style.display = "block"
+            not55.style.display = "none"
+        })
+        bess.addEventListener("click", function() {
+            not11.style.display = "none"
+            not22.style.display = "none"
+            not33.style.display = "none"
+            not44.style.display = "none"
+            not55.style.display = "block"
+        })
+    </script>
+
+    <!--2.YÖNTEM
+<script>
+    function gunlukac(evt, gunlukkısmı) {
+      var i, notlar, gunluk;
+      notlar = document.getElementsByClassName("notlar");
+      for (i = 0; i < notlar.length; i++) {
+       notlar[i].style.display = "none";
+      }
+      gunluk= document.getElementsByClassName("gunluk");
+      for (i = 0; i < gunluk.length; i++) {
+        gunluk[i].className = gunluk[i].className.replace(" active", "");
+      }
+      document.getElementById(gunlukkısmı).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+-->
+
+</body>
+
+</html>

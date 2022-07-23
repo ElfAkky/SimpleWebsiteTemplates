@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Elifakkaya_fullwebsite4-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fullsite4elif</title>
+    <script src="https://kit.fontawesome.com/fe45106741.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #main {
+            width: 100%;
+            height: auto;
+            justify-content: center;
+        }
+        
+        #header {
+            width: auto;
+            height: auto;
+            padding: 0.5%;
+            background-color: rgb(16, 209, 209);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        #headersol {
+            margin-left: 2%;
+            margin-right: 3%;
+            margin-top: 6px;
+        }
+        
+        #headersag {
+            margin-top: 6px;
+            margin-right: 2%;
+        }
+        
+        .p1 {
+            display: inline;
+        }
+        
+        .p1:hover {
+            color: white;
+            cursor: pointer;
+        }
+        
+        #headersol i:hover {
+            color: white;
+            cursor: pointer;
+        }
+        
+        #headersag i:hover {
+            color: white;
+            cursor: pointer;
+        }
+        
+        #pano {
+            width: auto;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient( 45deg, midnightblue, skyblue, palevioletred, crimson);
+            background-size: 500% 500%;
+            animation: animasyon 10s ease infinite;
+            animation-direction: alternate;
+            color: white;
+            transition: all 2s;
+        }
+        
+        #pano:hover {
+            background-image: linear-gradient(45deg, midnightblue, crimson);
+            background-size: 500% 500%;
+            animation: animasyon 5s ease infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes animasyon {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
+        
+        #menu {
+            background-color: black;
+            width: auto;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            position: sticky;
+            top: 0px;
+        }
+        
+        ul {
+            width: 100%;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        li {
+            float: left;
+            font-size: 20px;
+        }
+        
+        li a {
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 11px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: gray;
+            color: black;
+            cursor: pointer;
+        }
+        
+        #menu input {
+            border: 2px solid yellow;
+            width: 60%;
+            height: 40px;
+            margin-right: 2%;
+            border-radius: 5%;
+        }
+        
+        #anakısım {
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #aside {
+            background-color: lightgray;
+            width: 30%;
+            height: 150vh;
+            justify-content: left;
+            margin: 0px;
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 5px;
+        }
+        
+        #aside img {
+            border: 2px solid rgb(211, 200, 99);
+            border-radius: 60px;
+            background-color: gray;
+            width: 90%;
+            height: 12rem;
+            margin: 0 auto;
+            margin-right: 15px;
+        }
+        
+        .aside-image :hover {
+            cursor: pointer;
+        }
+        
+        #i {
+            color: white;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 100%;
+            cursor: pointer;
+        }
+        
+        #IMG1,
+        #IMG3,
+        #IMG5,
+        #childd,
+        #subchildd,
+        #spn1,
+        #spn2 {
+            display: none;
+        }
+        
+        #section {
+            width: 70%;
+            height: 150vh;
+            padding-left: 10px;
+        }
+        
+        #section h2 h4 {
+            text-align: left;
+        }
+        
+        .section-image {
+            border: 2px solid rgb(179, 179, 179);
+            border-radius: 10px;
+            background-color: rgb(179, 179, 179);
+            width: 97%;
+            height: 10rem;
+            margin: 0 auto;
+            text-align: left;
+            margin-top: -30px;
+            padding: 10px;
+        }
+        
+        .tab {
+            overflow: hidden;
+            margin-top: 2px;
+            margin-left: 1x;
+            margin-right: 23px;
+            border: 1px solid lightgray;
+            background-color: lightgray;
+        }
+        
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: purple;
+        }
+        
+        .notlar {
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            text-align: left;
+            width: 95%;
+            height: auto;
+            text-align: justify;
+        }
+        
+        #not1 {
+            display: block;
+        }
+        
+        #not2,
+        #not3,
+        #not4 {
+            display: none;
+        }
+        
+        .moreText {
+            display: none;
+        }
+        
+        .read-more-btn {
+            background-color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: blue;
+        }
+        
+        .read-more-btn:hover {
+            color: red;
+        }
+        
+        .text.show-more .moreText {
+            display: inline;
+        }
+        
+        .text.show-more .dots {
+            display: none;
+        }
+        
+        #yukaricikma {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            border: none;
+            outline: none;
+            background-color: red;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5%;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        #yukaricikma i {
+            position: relative;
+        }
+        
+        #yukaricikma:hover {
+            background-color: slategray;
+            color: white;
+        }
+        
+        #yukaricikma:hover i {
+            animation: elif 1s infinite;
+            color: turquoise;
+        }
+        
+        @keyframes elif {
+            0% {
+                bottom: 0px;
+                right: 0px;
+            }
+            100% {
+                bottom: 10px;
+                right: 0px;
+            }
+        }
+        
+        #footer {
+            width: auto;
+            height: 50px;
+            background-color: darkgrey;
+            padding-top: 30px;
+        }
+        
+        #div1 {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #div2 {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            #body {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            #menu {
+                display: block;
+                height: auto;
+                position: inherit;
+            }
+            li {
+                float: none;
+                display: block;
+            }
+            #menu input {
+                margin-left: 20%;
+            }
+            #anakısım {
+                display: block;
+            }
+            #aside {
+                width: 100%;
+                height: 130vh;
+            }
+            #section {
+                width: 100%;
+                height: 130vh;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            #header {
+                display: block;
+            }
+            #headersol {
+                margin-left: 20%;
+            }
+            #headersag {
+                margin-left: 20%;
+            }
+            #aside {
+                width: 100%;
+                height: 150vh;
+            }
+            #section {
+                width: 100%;
+                height: 150vh;
+            }
+            #menu input {
+                margin-left: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="header">
+            <div id="headersol">
+                <i class="fa-solid fa-envelope"></i>
+                <p class="p1">e-mail |</p>
+                <i class="fa-solid fa-phone"></i>
+                <p class="p1">0555 555 55 55 | X-Store</p>
+            </div>
+
+            <div id="headersag">
+                <i class="fa-brands fa-facebook-square"></i>
+                <p class="p1">Facebook |</p>
+                <i class="fa-brands fa-instagram"></i>
+                <p class="p1">Instagram |</p>
+                <i class="fa-brands fa-youtube"></i>
+                <p class="p1">Youtube</p>
+            </div>
+        </div>
+
+        <div id="pano">
+            <h1>My X-Blog</h1>
+
+            <h3>Lorem ipsum<b>X-Blog</b> or sit amet, consectetur adipiscing eli</h3>
+        </div>
+
+        <div id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Styles</a></li>
+                <li><a href="#">Subjects</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <input type="text" placeholder="Search..." />
+        </div>
+
+        <div id="anakısım">
+            <div id="aside">
+                <h2>ipsum dolor</h2>
+                <h4>ALorem ipsum</h4>
+                <div class="aside-image">
+                    <center><img src="https://images.pexels.com/photos/5561177/pexels-photo-5561177.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""></center>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+
+                <h3> Dolor sit</h3>
+
+                <input id="parentt" type="checkbox" />Parent
+                <p id="IMG1">&emsp;&emsp;&nbsp;Image 1
+                    </br>&emsp;&emsp;&nbsp;Image 2</p>
+
+
+                <div id="div1">
+                    &emsp;&emsp;<input id="childd" type="checkbox" /> <span id="spn1"> Child </span>
+                </div>
+                <p id="IMG3">&emsp;&emsp;&nbsp;&emsp;&emsp;&nbsp;Image 3
+                    </br>&emsp;&emsp;&nbsp;&emsp;&emsp;&nbsp;Image 4</p>
+
+
+                <div id="div2">
+                    &emsp;&emsp;&nbsp;&emsp;&emsp;<input id="subchildd" type="checkbox" /> <span id="spn2">SubChild</span>
+                </div>
+                <p id="IMG5">&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&ensp;Image 5
+                    </br>&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&ensp;Image 6
+                    </br>&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&ensp;Image 7
+                    </br>&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&ensp;Image 8
+                </p>
+
+                <!--<p id="IMG7">&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&ensp;Image 8</p>-->
+                <!--
+                        &emsp;4bosluk
+                        &ensp;2bosluk
+                        &nbsp;1bosluk bırakır
+                    -->
+
+
+
+            </div>
+
+            <div id="section">
+                <h2>metus</h2>
+                <h4>Nullam dui</h4>
+
+                <div class="tab">
+                    <button class="butonclass">Notlar1</button>
+                    <button class="butonclass">Notlar2</button>
+                    <button class="butonclass">Notlar3</button>
+                    <button class="butonclass">Notlar4</button>
+                </div>
+
+                <div id="not1" class="notlar">
+                    <h1>Note 1 </h1>
+                    </br>
+                    <div class="section-image ">Image1</div>
+                    <p class="text">Deleniti velit mconsectetur adipiscing elit<br><br>Duis vestibulum non, dignissim in metLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor
+                        non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eveniet
+                        dignissimos sunt ipsa sequi error quos repudiandae quo non, atque quaerat deleniti velit molestiae impedit illo libero consectetur totam assumenda explicabo amet asperiores voluptatum aperiam. Rem quia repellat odio! Facilis illo
+                        nemo corrupti cupiditate optio impedit a exercitationem laudantiumquaerat deleniti velit molestiae impedit illo libero consectetur totam assumenda explicabo amet asperiores voluptatum aperiam. Rem quia repellat odio! Facilis illo
+                        nemo corrupti cupiditate optio impedit a exercitationem laudantium<span class="dots">...</span> <span class="moreText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nobis, aut eligendi iusto rem hic magni, animi iste eius qui deleniti ratione deserunt excepturi. Ipsa non maxime
+                        sint hic tempora distinctio quos, saepe blanditiis eum cum, eligendi ut corporis odit rem iste molestias architecto quas quod. Odio iusto quos Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptate quas
+                        rerum quasi, quaerat laborum omnis quod perferendis incidunt rem beatae dolore in maiores molestias repellat hic magnam impedit aperiam iste nostrum totam facilis, quos reprehenderit illum! Ipsa libero maxime, deleniti nulla in
+                        modi accusamus at iste dolorem dicta consequuntur?</span></p>
+                    <button a class="read-more-btn" href="">Read More</a></button>
+                </div>
+
+                <div id="not2" class="notlar">
+                    <h1> Note 2 </h1>
+                    </br>
+                    <div class="section-image ">Image2</div>
+                    <p>Quis vestibulum noconsectetur adipiscing elit<br><br> Dui velit, consectetur quis vestibulum non,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor
+                        dolor non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eveniet
+                        dignissimos sunt ipsa sequi error quos repudiandae quo non</p>
+                </div>
+
+                <div id="not3" class="notlar">
+                    <h1> Note 3 </h1>
+                    </br>
+                    <div class="section-image ">Image3</div>
+                    <p>Sum dolor sit amet, consectetconsectetur adipiscing<br><br> Tincidunt purus eu, laoreetLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non ipsum ullamcorper, convallis tellus vel, dignissim arcu. Praesent auctor dolor
+                        non quam eleifend convallis. Aliquam vel ex interdum, tincidunt purus eu, laoreet sem. Nullam dui velit, consectetur quis vestibulum non, dignissim in metus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eveniet
+                        dignissimos sunt ipsa sequi error quos repudiandae quo non</p>
+                </div>
+
+                <div id="not4" class="notlar">
+                    <h1>Note 4 </h1>
+                    </br>
+                    <div class="section-image ">Image4</div>
+                    <p>Vel ex interdum, tincidunt purus eu..</p>
+
+                    <p>Download Monalisa
+                        <p>
+                            <a href="monalisa.jpeg" download>
+                                <img src="monalisa.jpeg" alt="monalisa" width="105" height="150">
+                            </a>
+                </div>
+
+            </div>
+        </div>
+        <div id="footer">
+            <center>FOOTER</center>
+        </div>
+
+        <button onclick="topTik()" id="yukaricikma"><i class="fa-solid fa-person-arrow-up-from-line"></i></button>
+
+    </div>
+
+    <script>
+        //Top butonu için//
+        yukariButtonu = document.getElementById("yukaricikma");
+        window.onscroll = function() {
+            scrollGosterme();
+        };
+
+        function scrollGosterme() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                yukariButtonu.style.display = "block ";
+            } else {
+                yukariButtonu.style.display = "none ";
+            }
+        }
+
+        function topTik() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        //section Notlar kısmı için//
+        var btn = document.querySelectorAll(".butonclass")
+        var notlarr = document.querySelectorAll(".notlar")
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", function() {
+
+                for (var j = 0; j < btn.length; j++) {
+                    notlarr[j].style.display = "none";
+                    btn[j].style.backgroundColor = "lightgray";
+
+                }
+                notlarr[i].style.display = "block";
+                btn[i].style.backgroundColor = "white";
+
+            });
+        }
+
+        //section ReadMore kısmı için//
+        const readMoreBtn = document.querySelector('.read-more-btn');
+        const text = document.querySelector('.text');
+
+        readMoreBtn.addEventListener('click', () => {
+            text.classList.toggle('show-more');
+            if (readMoreBtn.innerText === 'Read More') {
+                readMoreBtn.innerText = 'Read Less';
+            } else {
+                readMoreBtn.innerText = 'Read More';
+            }
+        })
+
+        //aside kategoriler checkboxs kısmı için//
+        var checkoop = document.getElementById("parentt");
+        var ımg11 = document.getElementById("IMG1")
+        var checkooc = document.getElementById("childd");
+        var ımg33 = document.getElementById("IMG3")
+        var checkoos = document.getElementById("subchildd");
+        var ımg55 = document.getElementById("IMG5");
+        var spn1 = document.getElementById("spn1");
+        var spn2 = document.getElementById("spn2");
+        checkoop.addEventListener('click', () => {
+
+            if (ımg11.style.display == "block") {
+                ımg11.style.display = "none";
+                checkooc.style.display = "none";
+                spn1.style.display = "none";
+                ımg33.style.display = "none";
+                checkoos.style.display = "none";
+                spn2.style.display = "none";
+                ımg55.style.display = "none";
+                checkooc.checked = false; //checkbox tik kaldırmak için
+                checkoos.checked = false
+
+            } else {
+                ımg11.style.display = "block";
+                checkooc.style.display = "block";
+                spn1.style.display = "block";
+            }
+
+        })
+        checkooc.addEventListener('click', () => {
+
+            if (ımg33.style.display == "block") {
+                ımg33.style.display = "none";
+                checkoos.style.display = "none";
+                spn2.style.display = "none";
+                ımg55.style.display = "none";
+                checkoos.checked = false
+            } else {
+                ımg33.style.display = "block";
+                checkoos.style.display = "block";
+                spn2.style.display = "block";
+            }
+
+        })
+        checkoos.addEventListener('click', () => {
+
+            if (ımg55.style.display == "block") {
+                ımg55.style.display = "none";
+
+            } else {
+                ımg55.style.display = "block";
+            }
+        })
+    </script>
+</body>
+
+</html>
